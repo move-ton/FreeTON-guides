@@ -1,4 +1,4 @@
-# Free TON quck start
+# Free TON quck start guide
 
 
 ### Centos/RH successful build
@@ -15,3 +15,5 @@ Tested to work on clean CentOS Linux release 8.1.1911
 It's better to optimize system variables to run node with maximum perfomance
 
 [Manual page](system/README.md)
+
+TG @ustinovpro
