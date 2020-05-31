@@ -1,4 +1,4 @@
-# Free TON useful advices
+# Free TON quck start
 
 
 ### Centos/RH successful build
