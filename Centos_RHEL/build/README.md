@@ -17,15 +17,11 @@ All command are issued under root (ie `su - root`)
 
 `dnf install -y openssl-devel git cmake readline-devel`
 
-2. Microhttpd
+2. Microhttpd & Ninja
 
-`dnf --enablerepo=PowerTools install -y libmicrohttpd-devel`
+`dnf --enablerepo=PowerTools install -y libmicrohttpd-devel ninja-build`
 
-3. Ninja
-
-`rpm -i http://mirror.centos.org/centos/8/PowerTools/x86_64/os/Packages/ninja-build-1.8.2-1.el8.x86_64.rpm`
-
-4. Rust
+3. Rust
 
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
