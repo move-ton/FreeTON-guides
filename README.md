@@ -12,6 +12,6 @@ You can contact us via TG
 
 ### [Centos/RH](Centos_RHEL) Section. All about FreeTON on Centos/RHEL
 
-[Successful build](Centos_RHEL/build) on Centos 8
+[Successful build](Centos_RHEL/build/README.md) on Centos 8
 
-[System settings](Centos_RHEL/system) for Centos 7-8
+[System settings](Centos_RHEL/system/README.md) for Centos 7-8
