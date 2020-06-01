@@ -10,7 +10,7 @@ You can contact us via TG
 - @ustinovpro Anatoly Ustinov 
 - @isheldon Ivan Kotelnikov
 
-### [Centos/RH](Centos_RHEL) Section. All about FreeTON on Centos/RHEL
+### [Centos/RH](Centos_RHEL/README.md) Section. All about FreeTON on Centos/RHEL
 
 [Successful build](Centos_RHEL/build/README.md) on Centos 8
 
