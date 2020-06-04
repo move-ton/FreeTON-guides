@@ -1,0 +1,18 @@
+[Unit]
+Description=TON Validator
+After=network.target auditd.service
+
+[Service]
+ExecStart=/ton/net.ton.dev/ton/build/validator-engine/validator-engine -C /var/ton-work/etc/ton-global.config.json --db /var/ton-work/db -t 18 -d
+Type=simple
+KillMode=process
+Restart=always
+RestartSec=3
+User=ton
+
+LimitNOFILE=1000000
+LimitNPROC=1000000
+
+[Install]
+WantedBy=multi-user.target
+Alias=ton.service
