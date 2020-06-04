@@ -38,3 +38,56 @@ rtcsync
 3. Restart service
 
 `service chronyd restart`
+
+### Firewalld
+
+Enable UDP 30310 for ADNL
+
+```
+firewall-cmd --zone=public --permanent --add-port=30310/udp
+firewall-cmd --reload
+```
+
+### Free TON service
+
+It's always better to let systemd manage validator-engine process to ensure availability.
+
+I've got all run key of validator-engine to produce service file.
+
+```
+validator-engine --help
+validator or full node for TON network
+-v|--verbosity<arg>     set verbosity level
+-h|--help       prints_help
+-C|--global-config<arg> file to read global config
+-c|--local-config<arg>  file to read local config
+-I|--ip<arg>    ip:port of instance
+-D|--db<arg>    root for dbs
+-f|--fift-dir<arg>      directory with fift scripts
+-d|--daemonize  set SIGHUP
+-l|--logname<arg>       log to file
+-s|--state-ttl<arg>     state will be gc'd after this time (in seconds) default=3600
+-b|--block-ttl<arg>     blocks will be gc'd after this time (in seconds) default=7*86400
+-A|--archive-ttl<arg>   archived blocks will be deleted after this time (in seconds) default=365*86400
+-K|--key-proof-ttl<arg> key blocks will be deleted after this time (in seconds) default=365*86400*10
+-S|--sync-before<arg>   in initial sync download all blocks for last given seconds default=3600
+-T|--truncate-db<arg>   truncate db (with specified seqno as new top masterchain block seqno)
+-U|--unsafe-catchain-restore<arg>       use SLOW and DANGEROUS catchain recover method
+-t|--threads<arg>       number of threads (default=7)
+-u|--user<arg>  change user
+```
+
+My idea about threads:
+
+I need to reserve 1 thread for NIC, at least one thread for NVMe LUN
+
+My TON vm is virtualized with 20 threads; physical cores on hypervisor is 12 and 24 threads total.
+
+I've decided to give 18 threads to validator-engine
+
+1. Place [file](ton.service) (please correct absolute paths to validator-engine/config/db and threads via '-t') under `/lib/systemd/system/`
+
+2. Run and enable service
+
+`service ton start`
+`systemctl enable ton`
