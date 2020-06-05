@@ -50,7 +50,9 @@ firewall-cmd --reload
 
 Or iptables style
 
+```
 firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p udp --dport 30310 -j ACCEPT
+```
 
 ### Free TON service
 
