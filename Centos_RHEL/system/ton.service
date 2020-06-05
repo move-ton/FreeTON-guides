@@ -3,7 +3,7 @@ Description=TON Validator
 After=network.target auditd.service
 
 [Service]
-ExecStart=/ton/net.ton.dev/ton/build/validator-engine/validator-engine -C /var/ton-work/etc/ton-global.config.json --db /var/ton-work/db -t 18 -d
+ExecStart=/ton/net.ton.dev/ton/build/validator-engine/validator-engine -C /var/ton-work/etc/ton-global.config.json --db /var/ton-work/db -l /var/log/ton/node.log -t 18 -d
 Type=simple
 KillMode=process
 Restart=always
