@@ -93,7 +93,7 @@ I've decided to give 18 threads to validator-engine
 
 1. Place [file](ton.service) (please correct absolute paths to validator-engine/config/db and threads via '-t') under `/lib/systemd/system/`
 
-2. Create dir for log collection `mkdir -p /var/log/ton/`
+2. Create dir for log collection `mkdir -p /var/log/ton/` chown if you run service under special user (eg ton) `chown -R ton:ton /var/log/ton/`
 
 3. Run and enable service
 
