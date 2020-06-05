@@ -58,7 +58,7 @@ firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p udp --dport 
 
 It's always better to let systemd manage validator-engine process to ensure availability.
 
-I've got all run key of validator-engine to produce service file.
+I've got all keys of validator-engine to produce service file. Remember, that `-C` is mandatory.
 
 ```
 validator-engine --help
@@ -93,7 +93,9 @@ I've decided to give 18 threads to validator-engine
 
 1. Place [file](ton.service) (please correct absolute paths to validator-engine/config/db and threads via '-t') under `/lib/systemd/system/`
 
-2. Run and enable service
+2. Create dir for log collection `mkdir -p /var/log/ton/`
+
+3. Run and enable service
 
 `service ton start`
 `systemctl enable ton`
