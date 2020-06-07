@@ -1,0 +1,9 @@
+/var/log/ton/* {
+  daily
+  rotate 7
+  copytruncate
+  missingok
+  compress
+  delaycompress
+  sharedscripts
+}
