@@ -2,7 +2,7 @@
 
 It's important to optimize some settings to ensure stability of the validator node
 
-### SYSCTL
+### Sysctl
 
 A good idea is to change default values to sysctl
 
@@ -98,4 +98,11 @@ I've decided to give 18 threads to validator-engine
 3. Run and enable service
 
 `service ton start`
+
 `systemctl enable ton`
+
+### Logrotate
+
+Good idea is to setup logrotate
+
+Put [file](ton) in `/etc/logrotate.d/`
