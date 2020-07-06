@@ -124,4 +124,5 @@ RateLimitBurst=800000
 ```
 
 Restart rsyslog `systemctl restart rsyslog`
+
 Restart journald `systemctl restart systemd-journald`
