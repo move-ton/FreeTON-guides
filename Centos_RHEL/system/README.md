@@ -100,3 +100,18 @@ I've decided to give 18 threads to validator-engine
 Good idea is to setup logrotate
 
 Put [file](ton) in `/etc/logrotate.d/`
+
+
+### Rsyslog
+
+Change `/etc/rsyslog.conf`
+
+```
+#module(load="imjournal"            # provides access to the systemd journal
+#       StateFile="imjournal.state") # File to store the position in the journal
+module(load="imjournal" RatelimitInterval="1" RatelimitBurst="800000" StateFile="imjournal.state")
+````
+
+Put [file](ton.conf) in `/etc/rsyslog.d/`
+
+Restart rsyslog `systemctl restart rsyslog`
