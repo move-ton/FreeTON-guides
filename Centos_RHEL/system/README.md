@@ -114,4 +114,6 @@ module(load="imjournal" RatelimitInterval="1" RatelimitBurst="800000" StateFile=
 
 Put [file](ton.conf) in `/etc/rsyslog.d/`
 
+Crate directory for ton log `mkdir -p /var/log/ton`
+
 Restart rsyslog `systemctl restart rsyslog`
