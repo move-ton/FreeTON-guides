@@ -102,18 +102,26 @@ Good idea is to setup logrotate
 Put [file](ton) in `/etc/logrotate.d/`
 
 
-### Rsyslog
+### Rsyslog & Journald
 
 Change `/etc/rsyslog.conf`
 
 ```
 #module(load="imjournal"            # provides access to the systemd journal
 #       StateFile="imjournal.state") # File to store the position in the journal
-module(load="imjournal" RatelimitInterval="1" RatelimitBurst="800000" StateFile="imjournal.state")
+module(load="imjournal" ratelimit.interval="0" StateFile="imjournal.state")
 ````
 
 Put [file](ton.conf) in `/etc/rsyslog.d/`
 
 Crate directory for ton log `mkdir -p /var/log/ton`
 
+Change `/etc/systemd/journald.conf`
+
+```
+RateLimitInterval=1s
+RateLimitBurst=800000
+```
+
 Restart rsyslog `systemctl restart rsyslog`
+Restart journald `systemctl restart systemd-journald`
