@@ -48,12 +48,6 @@ firewall-cmd --zone=public --permanent --add-port=30310/udp
 firewall-cmd --reload
 ```
 
-Or iptables style
-
-```
-firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p udp --dport 30310 -j ACCEPT
-```
-
 ### Free TON service
 
 It's always better to let systemd manage validator-engine process to ensure availability.
