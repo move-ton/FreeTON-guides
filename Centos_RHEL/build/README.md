@@ -15,7 +15,7 @@ All command are issued under root (ie `su - root`)
 
 `dnf groupinstall 'Development Tools' -y`
 
-`dnf install -y openssl-devel git cmake readline-devel`
+`dnf install -y openssl-devel git cmake readline-devel jq`
 
 2. Microhttpd & Ninja
 
