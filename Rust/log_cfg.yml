@@ -64,15 +64,15 @@ loggers:
 
   # block messages
   ton_block:
-    level: error
+    level: off
 
   # block messages
   executor:
-    level: error
+    level: off
 
   # tvm messages
   tvm:
-    level: error
+    level: off
 
   librdkafka:
     level: error
