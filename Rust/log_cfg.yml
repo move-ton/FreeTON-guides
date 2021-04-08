@@ -43,45 +43,45 @@ root:
 loggers:
   # node messages
   ton_node:
-    level: off
+    level: error
   boot:
-    level: off
+    level: error
   sync:
-    level: off
+    level: error
 
   # adnl messages
   adnl:
-    level: off
+    level: error
 
   overlay:
-    level: off
+    level: error
 
   rldp:
-    level: off
+    level: error
 
   dht:
-    level: off
+    level: error
 
   # block messages
   ton_block:
-    level: off
+    level: error
 
   # block messages
   executor:
-    level: off
+    level: error
 
   # tvm messages
   tvm:
-    level: off
+    level: error
 
   librdkafka:
-    level: off
+    level: error
 
   validator:
-    level: off
+    level: error
 
   catchain:
-    level: off
+    level: error
 
   validator_session:
-    level: off
+    level: error
