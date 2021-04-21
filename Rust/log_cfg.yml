@@ -85,3 +85,9 @@ loggers:
 
   validator_session:
     level: error
+    
+  telemetry:
+    level: error
+
+  overlay_broadcast:
+    level: error
