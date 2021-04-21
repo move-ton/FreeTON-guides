@@ -91,3 +91,6 @@ loggers:
 
   overlay_broadcast:
     level: error
+
+  validate_query:
+    level: error
